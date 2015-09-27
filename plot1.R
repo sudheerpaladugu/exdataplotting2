@@ -15,5 +15,5 @@ yearlyCount <- aggregate(subNEI$Emissions, by = list(subNEI$year),sum)
 png(filename = "plot1.png", width = 480, height = 480, units = "px", bg = "transparent")
 par(mar=c(4,4,4,4))
 #plotting the graph
-plot(x=yearlyCount$Group.1, y=yearlyCount$x, type="b",  pch=19, main = 'Emissions counts (1999 - 2008)', xlab = " Year", ylab = "Total Emissions")
+plot(x=yearlyCount$Group.1, y=yearlyCount$x, type="b",  pch=19, main = 'Emissions counts (1999 - 2008)', xlab = " Year", ylab = "Total PM 2.5 Emissions")
 dev.off()
