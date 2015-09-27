@@ -93,7 +93,7 @@ png(filename = "plot1.png", width = 480, height = 480, units = "px", bg = "trans
 par(mar=c(4,4,4,4))
 plot(x=yearlyCount$Group.1, y=yearlyCount$x, type="b",  p
 ch=19, main = 'Emissions counts (1999 - 2008)', 
-xlab = " Year", ylab = "Total Emissions")
+xlab = " Year", ylab = "Total PM 2.5 Emissions")
 ```
 
 ![plot of chunk plot1](plot1.png) 
