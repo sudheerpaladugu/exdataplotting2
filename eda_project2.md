@@ -91,8 +91,8 @@ Using the base plotting system, now we plot the total PM2.5 Emission from all so
 ```r
 png(filename = "plot1.png", width = 480, height = 480, units = "px", bg = "transparent")
 par(mar=c(4,4,4,4))
-plot(x=yearlyCount$Group.1, y=yearlyCount$x, type="b",  p
-ch=19, main = 'Emissions counts (1999 - 2008)', 
+plot(x=yearlyCount$Group.1, y=yearlyCount$x, type="b",  
+pch=19, main = 'Emissions counts (1999 - 2008)', 
 xlab = " Year", ylab = "Total PM 2.5 Emissions")
 ```
 
@@ -101,3 +101,28 @@ xlab = " Year", ylab = "Total PM 2.5 Emissions")
 **Have total emissions from PM2.5 decreased in the United States from 1999 to 2008?**
 
 As we can see from the plot, total emissions have decreased in the US from 1999 to 2008.
+
+### Question 2
+
+First we aggregate total emissions from PM2.5 for Baltimore City, Maryland (fips="24510") from 1999 to 2008.
+
+
+```r
+bmNEI <- select(filter(NEI,fips == "24510"), c(4,6))
+bmYearlyCount <- aggregate(Emissions ~ year, bmNEI,sum)
+```
+
+Now we use the base plotting system to make a plot of this data,
+
+
+```r
+plot(x=bmYearlyCount$year, y=bmYearlyCount$Emissions, type="b",  
+pch=19, main = 'Baltimore City, MD - Emissions (1999 - 2008)', 
+xlab = " Year", ylab = "PM2.5 Emissions")
+```
+
+![plot of chunk plot2](plot2.png) 
+
+**Have total emissions from PM2.5 decreased in the Baltimore City, Maryland (fips == "24510") from 1999 to 2008?**
+
+Overall total emissions from PM2.5 have decreased in Baltimore City, Maryland from 1999 to 2008.
