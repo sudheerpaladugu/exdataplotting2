@@ -1,0 +1,5 @@
+http://rstudio-pubs-static.s3.amazonaws.com/18232_7ca1e8f3dcef4cdf8252612f398de02f.html
+https://github.com/wayneeseguin/exdata-project2/blob/master/plot3.R
+http://monaenary.com/Coursera-Data-Science-Exploratory-Data-Analysis2/
+https://rpubs.com/BIN_FANG/112299
+https://rpubs.com/bookcase1001/exdata_peerassessment2
